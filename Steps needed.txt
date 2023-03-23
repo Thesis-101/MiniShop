@@ -1,0 +1,34 @@
+Copy the project files from your laptop to the other PC using a flash drive or any other method of your choice.
+
+1. Install PHP 7.3 or newer on the other PC. You can download PHP from the official website (https://www.php.net/downloads.php) and follow the installation instructions.
+
+2. Install Composer on the other PC. You can download Composer from the official website (https://getcomposer.org/download/) and follow the installation instructions.
+
+3. Open a terminal or command prompt on the other PC and navigate to the project directory.
+
+4. Run the following command to install the project dependencies:
+
+   || composer install ||
+
+5. Copy the .env file from your laptop to the project directory on the other PC.
+
+6. Open the .env file on the other PC and update the necessary configuration settings such as the database connection details.
+
+7. Run the following command to apply the migrations:
+
+   || php spark migrate ||
+
+   This will create the necessary database tables and columns.
+
+8. If you need to rollback the migrations, you can run the following command:
+
+   || php spark migrate:rollback ||
+   
+   This will undo the last batch of migrations.
+
+9. Start a development server by running the following command:
+
+   || php spark serve ||
+
+10. Open a web browser and navigate to http://localhost:8080 (or whichever port you specified in the .env file) to view your CodeIgniter 4 project.
+That's it! You should now have your CodeIgniter 4 project running on the other PC with the necessary database tables created using the migration files. If you encounter any errors, make sure to check the server logs and update any necessary configuration settings.
